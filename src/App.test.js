@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
+import { RiItalic } from 'react-icons/ri';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+// testing for criteria
+describe('Header tests',()=>{
+
+it('should find the header text', ()=> {
+  render(<App/>);
+  const headerElement = screen.getByText(/To-Do list/i);
+  expect(headerElement).toBeInTheDocument();
+})
 });
+
